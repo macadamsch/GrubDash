@@ -120,10 +120,10 @@ const nextId = require("../utils/nextId");
 
   const updateValidation = (req, res, next) => {
     orderExists(req, res, next);
-    validateDishes(req, res,next);
     validateDelivery(req, res, next);
     validateMobileNum(req, res, next);
     orderHasDishes(req, res, next);
+    validateDishes(req, res, next);
     validateOrderId(req, res, next);
     validateStatus(req, res, next);
     validateNotDelivered(req, res, next);
@@ -174,4 +174,3 @@ const nextId = require("../utils/nextId");
     list: [listOrders],
     delete: [deleteValidation, destroy]
   };
-  
